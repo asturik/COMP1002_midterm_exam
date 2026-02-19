@@ -1,0 +1,124 @@
+/*Use at least 2 CSS variables (2 marks) */
+/*Use Flexbox in the navigation only (1 mark) */
+/*Use at least three different types of selectors (e.g., element, class, id, pseudo-class, descendant, etc.) (3 marks) */
+/*Style the form so inputs and button do not appear as default browser styling (2 marks) */
+/*Include at least one interactive state (:hover or :focus) (1 mark) */
+
+/* Element selector - Makes the jump between sections smooth*/
+html {
+  scroll-behavior: smooth;
+}
+
+/* Element selector - Font, color, text align, and spacing for the body*/
+body {
+  font-family: Arial, sans-serif;
+  margin: 1em;
+  background-color: #f4f6fa;
+  color: #111827;
+  text-align: center; /* Centers all text on the page */
+}
+
+/* Class selector  - Color and padding for site header */
+.site-header {
+  background-color: #1f2937;
+  color: white;
+  padding: 20px;
+}
+
+/* Class selector */
+.nav-list {
+  list-style: none; /* Removes default bullet points */
+  display: flex; /* Makes the list items appear in a row (horizontally) */
+  gap: 15px; /* Adds space between each link */
+  padding: 0;
+  margin: 0;
+  justify-content: center; /* Centers the text */
+}
+
+/* Class selector */
+.nav-list a {
+  color: white;
+  text-decoration: none; /* Removes underline */
+  padding: 6px 10px;
+  border-radius: 8px; /* Adds rounded corners to the link background */
+  display: inline-block; /* Makes the padding and background visible/clickable */
+  transition: transform 0.2s ease, background-color 0.2s ease; /* Smooth animation for hover */
+}
+
+/* Pseudo-class selector */
+.nav-list a:hover /* Creates the base animation effects for hover (bigger text & color chnage) */{
+  transform: scale(1.08);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Class selector  - Color, CenteredContent, RoundedCorners, and a SoftShadow added */
+.card {
+  background: white;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* NEW: Divider line - Black line separating Contact from the rest of page  */
+.section-divider {
+  border: none;
+  border-top: 4px solid black;
+  width: 85%;
+  margin: 35px auto 15px;
+}
+
+/* Attribute selector - Makes the required fields stand out with a purple left border */
+input[required], textarea[required] {
+  border-left: 4px solid #5708b7;
+}
+
+/* Element selector - Even spacing and centred*/
+form {
+  display: grid;
+  gap: 10px;
+  margin-top: 10px;
+  justify-items: center;
+}
+
+/* Element selector - Makes labels bold */
+label {
+  font-weight: 700;
+}
+
+/* Element selector - Color, padding, and border styling for input fields */
+input, textarea {
+  padding: 10px;
+  margin-bottom: 6px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 520px;
+}
+
+/* Element selector - Makes the button look more visually appealing */
+button {
+  padding: 10px 14px;
+  background-color: #5708b7;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+/* Element selector - Button enlarges and darkens slightly on hover */
+button:hover {
+  transform: scale(1.08);
+  filter: brightness(0.95);
+}
+
+/* Element selector - Aligns text in footer, color and padding*/
+footer {
+  text-align: center;
+  padding: 15px;
+  color: #6b7280;
+}
